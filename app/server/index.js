@@ -1,30 +1,23 @@
 var app = require('./server')(),
 	express = require('express'),
 	path = require('path'),
-	cookieParser = require('cookie-parser'),
-	session = require('express-session'),
 	login = require('./controllers/login'),
+	index = require('./controllers/index');
+	path = require('path'),
 	passport = require('./controllers/passport')();
 
-//config express.
-app.use(cookieParser());
-app.use(session({ secret: 'blizzard',
-                  saveUninitialized: true,
-                  resave: true }));
-
-app.use(passport.initialize());
-app.use(passport.session());
-
 //define default route
-app.get('/', function(req, res){
-	res.status(200).send('Hello World');;
-});
+app.get('/', index.all);
+
+//define oauth login from blizzard
 app.get('/auth/bnet',
     passport.authenticate('bnet'));
 
 app.get('/auth/bnet/callback',
     passport.authenticate('bnet', { failureRedirect: '/' }),
     login.blizzCallBack);
+
+app.get('/api/nav', index.nav);
 
 
 

@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "cookie-parser": "^1.4.0",
+    "ejs": "^2.3.4",
     "express": "^4.13.3",
     "express-session": "^1.11.3",
     "passport": "^0.3.0",
