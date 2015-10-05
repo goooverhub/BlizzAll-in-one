@@ -1,3 +1,4 @@
 ssl/
 node_modules/
 bower_components/
+app/client/wrapper/
