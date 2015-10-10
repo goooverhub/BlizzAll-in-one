@@ -17,7 +17,7 @@ module.exports = function(){
 	passport.use(new BnetStrategy({
 	    clientID: BNET_ID,
 	    clientSecret: BNET_SECRET,
-	    callbackURL: "https://localhost:8443/auth/bnet/callback"
+	    callbackURL: "https://192.241.209.107:8443/auth/bnet/callback"
 	}, function(accessToken, refreshToken, profile, done) {
 	    return done(null, profile, accessToken);
 	}));

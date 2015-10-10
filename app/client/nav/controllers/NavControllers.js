@@ -17,7 +17,7 @@ NavControllers.controller('NavController', ['$q', '$scope', '$location', '$http'
       'Authorization': 'Bearer: '+authKey
     },
     data: {
-      redirect_uri : 'https://localhost:8443/auth/bnet/callback',
+      redirect_uri : 'https://192.241.209.107:8443/auth/bnet/callback',
       scope: 'sc2.profile',
       grant_type: 'authorization_code',
       code : authKey,
