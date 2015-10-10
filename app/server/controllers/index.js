@@ -23,3 +23,7 @@ exports.nav = function(req, res){
 
 	return Q.fcall(getJsonContent).then(parseJson).then(returnResult);
 };
+
+exports.authKey = function(req,res) {
+	res.status(200).send(req.session.authKey);
+}

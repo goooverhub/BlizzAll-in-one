@@ -18,7 +18,12 @@ app.get('/auth/bnet/callback',
     login.blizzCallBack);
 
 app.get('/api/nav', index.nav);
+app.get('/api/authKey', index.authKey);
 
+app.get('/test', function(req,res){
+	console.log(passport);
+	return passport.__code;
+});
 
 
 

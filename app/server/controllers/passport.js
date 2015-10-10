@@ -5,6 +5,7 @@ var passport = require('passport'),
 
 module.exports = function(){
 	//init passport
+
 	passport.serializeUser(function(user, done) {
 	    done(null, user);
 	});
@@ -18,7 +19,7 @@ module.exports = function(){
 	    clientSecret: BNET_SECRET,
 	    callbackURL: "https://localhost:8443/auth/bnet/callback"
 	}, function(accessToken, refreshToken, profile, done) {
-	    return done(null, profile);
+	    return done(null, profile, accessToken);
 	}));
 
 	return passport;
