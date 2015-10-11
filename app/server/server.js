@@ -10,7 +10,6 @@ var http = require('http');
 
 module.exports = function() {
 	var app = express();
-
 	var credentialPath = path.resolve(__dirname, '../../ssl/');
 	var httpsCredential = {
 		key: fs.readFileSync(credentialPath + '/server.key'),

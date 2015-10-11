@@ -1,8 +1,15 @@
-var app = angular.module('app', ['ngRoute','NavControllers']);
+var app = angular.module('app', ['ngRoute','NavControllers', 'TestControllers']);
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 	$routeProvider.when('/#', {
 		templateUrl: 'index.ejs'
+	})
+	.when('/test', {
+		templateUrl: './test.ejs',
+		controller: 'TestController'
 	});
+	// .otherwise({
+	// 	redirectTo: '/#'
+	// });
 
 	$locationProvider.html5Mode(true);
 }]);

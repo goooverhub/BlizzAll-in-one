@@ -17,7 +17,8 @@
     "passport": "^0.3.0",
     "passport-bnet": "^1.1.1",
     "password": "^0.1.1",
-    "q": "^1.4.1"
+    "q": "^1.4.1",
+    "request": "^2.64.0"
   },
   "devDependencies": {},
   "scripts": {
