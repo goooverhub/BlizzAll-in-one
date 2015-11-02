@@ -5,12 +5,9 @@ NavControllers.controller('NavController', ['$q', '$scope', '$location', '$http'
     method: 'GET',
     url: '/api/nav'
   }).success(function(res){
-    console.log(res.data);
     $scope.navs = res.data;
   });
   $scope.isActive = function(path){
-    console.log($location.path());
-    console.log(path.substring(2, path.toString().length));
     return $location.path() === path.substring(2, path.toString().length);
   }
 }])

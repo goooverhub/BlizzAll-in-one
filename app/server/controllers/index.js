@@ -7,6 +7,10 @@ exports.all = function(req, res){
 	res.render('index.ejs');
 }
 
+exports.profile = function(req, res) {
+	res.json(req.user);
+}
+
 exports.nav = function(req, res){
 	var filePath = path.join(__dirname+'/nav.json');
 

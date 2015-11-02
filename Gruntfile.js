@@ -24,7 +24,8 @@ module.exports = function(grunt) {
           'app/client/wrapper/js/':'/bootstrap/dist/js/',
           'app/client/wrapper/fonts/':'/bootstrap/dist/fonts/',
           'app/client/wrapper/angular/':'/angular/',
-          'app/client/wrapper/angular-route/':'/angular-route/'
+          'app/client/wrapper/angular-route/':'/angular-route/',
+          'app/client/wrapper/angular-cookies':'/angular-cookies'
         }
       }
     }

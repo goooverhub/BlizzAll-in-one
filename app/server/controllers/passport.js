@@ -7,8 +7,8 @@ var passport = require('passport'),
 
 module.exports = function(){
 	//init passport
-	var BNET_ID = '9v2v9872qqarmx7gj3x4s6ba6c4452dp',
-		BNET_SECRET = 'SMpeedKBpkZNArAEM7ufdT65a69bNYFV',
+	var BNET_ID = 'dk2gt3fz4qhwfk76kan6p8ueenynev8j',
+		BNET_SECRET = 'ra3Xq77xWhnaGKBgK67q3hjNTF7hB6Mw',
 		host = 'localhost',
 		protocol = 'https://',
 		port ='8443',

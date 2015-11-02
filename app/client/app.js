@@ -1,11 +1,11 @@
-var app = angular.module('app', ['ngRoute','NavControllers', 'TestControllers']);
+var app = angular.module('app', ['ngRoute','NavControllers', 'D3']);
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 	$routeProvider.when('/#', {
 		templateUrl: 'index.ejs'
 	})
-	.when('/test', {
-		templateUrl: './test.ejs',
-		controller: 'TestController'
+	.when('/d3', {
+		templateUrl: './d3/d3.ejs',
+		controller: 'd3'
 	});
 	// .otherwise({
 	// 	redirectTo: '/#'

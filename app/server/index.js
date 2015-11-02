@@ -20,6 +20,8 @@ app.get('/auth/bnet/callback',
 app.get('/api/nav', index.nav);
 app.get('/api/authToken', index.authToken);
 
+app.get('/api/profile', index.profile);
+
 
 
 
